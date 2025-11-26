@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SN7JFYP48S"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-SN7JFYP48S');
+    </script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ali Abbasi - Machine Learning Engineer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Canvas for Tube Background Animation -->
+    <canvas id="canvas"></canvas>
+    
+    <!-- SVG Filter for Liquid Glass Effect -->
+    <svg style="display: none;">
+        <filter id="liquidGlass">
+            <feTurbulence type="fractalNoise" baseFrequency="0.008 0.008" numOctaves="4" seed="92" result="noise" />
+            <feDisplacementMap in="SourceGraphic" in2="blurred" scale="50" xChannelSelector="B" yChannelSelector="G" />
+        </filter>
+    </svg>
+    
+    <div class="container">
+        <!-- LEFT SIDE: Profile and Updates Column -->
+        <div class="left-column">
+            <!-- Profile Panel with Liquid Glass -->
+            <aside class="profile-panel liquid-glass">
+                <div class="profile-content">
+                    <div class="profile-header">
+                        <img src="profile-photo.jpg" alt="Ali Abbasi" class="profile-photo">
+                    </div>
+                    
+                    <div class="profile-info">
+                        <div class="profile-text">
+                            <h1 class="profile-name">Ali Abbasi</h1>
+                            <h2 class="profile-role">Machine Learning Engineer</h2>
+                        </div>
+                        
+                        <div class="profile-contacts">
+                            <a href="mailto:abbasialiar@gmail.com" class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <span>abbasialiar@gmail.com</span>
+                            </a>
+                            <a href="https://github.com/aliarabbasi5155" target="_blank" class="contact-item">
+                                <i class="fab fa-github"></i>
+                                <span>aliarabbasi5155</span>
+                            </a>
+                            <a href="https://linkedin.com/in/aliabbasi5155" target="_blank" class="contact-item">
+                                <i class="fab fa-linkedin"></i>
+                                <span>aliabbasi5155</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Latest Updates Panel with Liquid Glass -->
+            <aside class="updates-panel liquid-glass">
+                <div class="updates-header">
+                    <h3><i class="fas fa-bolt"></i> Latest Updates</h3>
+                </div>
+                <div class="updates-content">
+                    <div class="update-item">
+                        <div class="update-date">Oct 21 2025</div>
+                        <div class="update-text">
+                            <strong>🚀 New Project Started:</strong> Starting working on a new LLM-Based project using Django and React temporarily called HardWordExtractor.
+                        </div>
+                    </div>
+                    <div class="update-item">
+                        <div class="update-date">Sep 18 2025</div>
+                        <div class="update-text">
+                            <strong>🌐 Website Renewal:</strong> Renewed personal website on GitHub Pages with updated design and content.
+                        </div>
+                    </div>
+                    <div class="update-item">
+                        <div class="update-date">Jan 2025</div>
+                        <div class="update-text">
+                            <strong>📄 Publication Accepted!</strong> Our paper on "Transforming Stroop task cognitive assessments with multimodal IRL" has been published in Elsevier Smart Health Journal.
+                        </div>
+                    </div>
+                    <div class="update-item">
+                        <div class="update-date">Dec 2024</div>
+                        <div class="update-text">
+                            <strong>🎤 Conference Acceptance:</strong> Paper accepted at IEEE/CHASE 2025 Conference.
+                        </div>
+                    </div>
+                    <div class="update-item">
+                        <div class="update-date">Dec 10 2024</div>
+                        <div class="update-text">
+                            <strong>🎓 Graduation:</strong> Finally graduated from my master's degree in Data Science and Engineering.
+                        </div>
+                    </div>
+                    <div class="update-item">
+                        <div class="update-date">Dec 10 2024</div>
+                        <div class="update-text">
+                            <strong>🛡️ Thesis Defense:</strong> Successfully defended M.Sc. thesis on "Reconstructing Human Gaze Behavior in Stroop Test Using IRL and EEG Data".
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+        
+        <!-- MIDDLE: Navigation Panel with Liquid Glass -->
+        <aside class="navigation-panel liquid-glass">
+            <nav class="section-nav">
+                <button class="nav-button active" data-tab="blog">
+                    <i class="fas fa-pen-alt"></i>
+                    <span>Blog</span>
+                </button>
+                <button class="nav-button" data-tab="about">
+                    <i class="fas fa-user"></i>
+                    <span>About</span>
+                </button>
+                <button class="nav-button" data-tab="experience">
+                    <i class="fas fa-briefcase"></i>
+                    <span>Experience</span>
+                </button>
+                <button class="nav-button" data-tab="education">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>Education</span>
+                </button>
+                <button class="nav-button" data-tab="skills">
+                    <i class="fas fa-code"></i>
+                    <span>Skills</span>
+                </button>
+                <button class="nav-button" data-tab="projects">
+                    <i class="fas fa-folder-open"></i>
+                    <span>Projects</span>
+                </button>
+                <button class="nav-button" data-tab="publications">
+                    <i class="fas fa-book"></i>
+                    <span>Publications</span>
+                </button>
+                <button class="nav-button" data-tab="interests">
+                    <i class="fas fa-heart"></i>
+                    <span>Interests</span>
+                </button>
+            </nav>
+        </aside>
+        
+        <!-- RIGHT SIDE: Content Sections -->
+        <main class="content-panel">
+            <!-- Section Title Card -->
+            <div class="section-header-card">
+                <h2 id="section-title">Blog Posts</h2>
+            </div>
+            
+            <!-- Content Card -->
+            <div class="section-content-card">
+                <!-- Tab Contents -->
+                <div class="tab-contents">
+                    <!-- About Tab -->
+                    <div id="about" class="tab-content">
+                        <section class="summary">
+                            <p><strong>Machine Learning Engineer</strong> with robust foundation in fullstack development from 5+ years as a Senior Developer. Specialized in Reinforcement Learning, Computer Vision, and LLMs, with hands-on DevOps and React/Django expertise. Demonstrated success in delivering scalable, data-driven solutions across large scale real-world problems, and researches.</p>
+                        </section>
+                    </div>
+
+                <!-- Experience Tab -->
+                <div id="experience" class="tab-content">
+                    <section class="experience">
+                    
+                    <div class="job">
+                        <div class="job-header">
+                            <h4>Machine Learning Engineer | Senior Fullstack Developer</h4>
+                            <div class="company-location">
+                                <span class="company">
+                                    <a href="https://www.nimbus.aero/" target="_blank">Nimbus SRL <i class="fas fa-external-link-alt"></i></a>
+                                </span>
+                                <span class="location">Turin, Italy</span>
+                            </div>
+                            <span class="duration">Feb 2022 - Present</span>
+                        </div>
+                        <ul class="job-description">
+                            <li>Engineered an RL model using Proximal Policy Optimization (PPO) to stabilize autopilot mode for VTOL drones, achieving 5% less crashed under poor weather conditions in 2024.</li>
+                            <li>Implemented fine-tuning on llama-3-8b via Hugging Face pipelines with company knowledge base, reducing newcomer onboarding time to 2-3 days.</li>
+                            <li>Built LLM-powered customer support using a LangChain RAG stack over llama-3-8b and internal sources, now serving 1200+ weekly queries.</li>
+                            <li>Directed a 4-member team to build a cross-platform monitoring system, enabling real-time monitoring of over 150 UAVs in Europe over AWS.</li>
+                            <li>Modernized software architecture with React Native, Django DRF, and CI/CD pipelines, delivering 50,000 euro annual cost savings by 2 members less in software development team.</li>
+                            <li>Contributed in Charger Box project, to automatically move the drone to suitable place for charge. (less than 0.5cm error).</li>
+                        </ul>
+                    </div>
+
+                    <div class="job">
+                        <div class="job-header">
+                            <h4>Machine Learning Engineer | Fullstack Developer</h4>
+                            <div class="company-location">
+                                <span class="company">
+                                    <a href="https://www.reefilla.com/" target="_blank">Reefilla SRL <i class="fas fa-external-link-alt"></i></a>
+                                </span>
+                                <span class="location">Turin, Italy</span>
+                            </div>
+                            <span class="duration">Sep 2021 - Feb 2022</span>
+                        </div>
+                        <ul class="job-description">
+                            <li>Designed a recommender model to predict optimal electric power bank request timing, increasing delivering time by 18%.</li>
+                            <li>Contributed in development of a cross-platform(React Native and Django) application for electric vehicle charge management with over 800 active users in 2021.</li>
+                        </ul>
+                    </div>
+
+                    <h3 style="margin-top: 2rem;">Earlier Experience</h3>
+
+                    <div class="job">
+                        <div class="job-header">
+                            <h4>Backend Developer</h4>
+                            <div class="company-location">
+                                <span class="company">Bardal Startup</span>
+                                <span class="location">Tehran, Iran</span>
+                            </div>
+                            <span class="duration">Jul 2019 - Jan 2020</span>
+                        </div>
+                        <ul class="job-description">
+                            <li>Developed RESTful APIs using Django and Django REST Framework for backend services.</li>
+                            <li>Implemented containerization with Docker and orchestration with Kubernetes for scalable deployments.</li>
+                            <li>Managed PostgreSQL databases and optimized query performance.</li>
+                        </ul>
+                    </div>
+
+                    <div class="job">
+                        <div class="job-header">
+                            <h4>Frontend Developer</h4>
+                            <div class="company-location">
+                                <span class="company">Spinzer Startup</span>
+                                <span class="location">Tehran, Iran</span>
+                            </div>
+                            <span class="duration">Nov 2018 - Jun 2019</span>
+                        </div>
+                        <ul class="job-description">
+                            <li>Built responsive web applications using ReactJS, TypeScript, and Redux for state management.</li>
+                            <li>Implemented modern UI/UX designs with HTML5 and CSS3.</li>
+                            <li>Collaborated with backend team to integrate RESTful APIs.</li>
+                        </ul>
+                    </div>
+
+                    <div class="job">
+                        <div class="job-header">
+                            <h4>Backend Developer (Internship)</h4>
+                            <div class="company-location">
+                                <span class="company">
+                                    <a href="https://www.saeedco.com/" target="_blank">Saaed Co. <i class="fas fa-external-link-alt"></i></a>
+                                </span>
+                                <span class="location">Arak, Iran</span>
+                            </div>
+                            <span class="duration">Jun 2018 - Oct 2018</span>
+                        </div>
+                        <ul class="job-description">
+                            <li>Developed backend services using .NET framework and RESTful API design principles.</li>
+                            <li>Created dynamic web interfaces with HTML, CSS, and JavaScript.</li>
+                            <li>Gained hands-on experience in full-stack development and agile methodologies.</li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Education Tab -->
+            <div id="education" class="tab-content">
+                <section class="education">
+                    
+                    <div class="degree">
+                        <div class="degree-header">
+                            <h4>M.Sc. in Data Science and Engineering</h4>
+                            <div class="institution-location">
+                                <span class="institution">
+                                    <a href="https://www.polito.it/" target="_blank">Polytechnic University of Turin</a>
+                                </span>
+                                <span class="location">Turin, Italy</span>
+                            </div>
+                            <span class="duration">2020 - 2024</span>
+                        </div>
+                        <ul class="degree-details">
+                            <li><strong>Thesis:</strong> "Reconstructing Human Gaze Behavior in Stroop Test from EEG Data Using Inverse Reinforcement Learning" 
+                                <a href="https://webthesis.biblio.polito.it/34008/" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                            </li>
+                            <li><strong>Publication:</strong> Published in Elsevier Smart Health Journal (2025) based on thesis work 
+                                <a href="https://www.sciencedirect.com/science/article/pii/S2352648325000285" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                            </li>
+                            <li><strong>Conference:</strong> Also accepted at IEEE/CHASE 2025 Conference</li>
+                        </ul>
+                    </div>
+
+                    <div class="degree">
+                        <div class="degree-header">
+                            <h4>B.Sc. in Computer Engineering</h4>
+                            <div class="institution-location">
+                                <span class="institution">
+                                    <a href="https://www.araku.ac.ir/" target="_blank">Arak University</a>
+                                </span>
+                                <span class="location">Arak, Iran</span>
+                            </div>
+                            <span class="duration">2015 - 2019</span>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Skills Tab -->
+            <div id="skills" class="tab-content">
+                <section class="skills">
+                    
+                    <div class="skills-grid">
+                        <div class="skill-category">
+                            <h4>Programming Languages</h4>
+                            <div class="skill-tags">
+                                <span class="skill-tag">Python</span>
+                                <span class="skill-tag">C++</span>
+                                <span class="skill-tag">C#</span>
+                                <span class="skill-tag">JavaScript</span>
+                                <span class="skill-tag">TypeScript</span>
+                                <span class="skill-tag">HTML</span>
+                                <span class="skill-tag">CSS</span>
+                                <span class="skill-tag">SQL</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-category">
+                            <h4>Machine Learning & Data Science</h4>
+                            <div class="skill-subcategory">
+                                <h5>Frameworks & Libraries:</h5>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">PyTorch</span>
+                                    <span class="skill-tag">TensorFlow</span>
+                                    <span class="skill-tag">TFLite</span>
+                                    <span class="skill-tag">scikit-learn</span>
+                                    <span class="skill-tag">LangChain</span>
+                                    <span class="skill-tag">Hugging Face Transformers</span>
+                                    <span class="skill-tag">Matplotlib</span>
+                                    <span class="skill-tag">NetworkX</span>
+                                    <span class="skill-tag">NumPy</span>
+                                    <span class="skill-tag">Pandas</span>
+                                </div>
+                            </div>
+                            <div class="skill-subcategory">
+                                <h5>Tools:</h5>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">WandB</span>
+                                    <span class="skill-tag">TensorBoard</span>
+                                </div>
+                            </div>
+                            <div class="skill-subcategory">
+                                <h5>Techniques & Algorithms:</h5>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">Reinforcement Learning</span>
+                                    <span class="skill-tag">Deep Learning</span>
+                                    <span class="skill-tag">NLP & LLM</span>
+                                    <span class="skill-tag">Computer Vision</span>
+                                    <span class="skill-tag">Prompt Engineering</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="skill-category">
+                            <h4>Backend Development</h4>
+                            <div class="skill-subcategory">
+                                <h5>Frameworks:</h5>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">Django</span>
+                                    <span class="skill-tag">DRF</span>
+                                    <span class="skill-tag">.NET</span>
+                                </div>
+                            </div>
+                            <div class="skill-subcategory">
+                                <h5>Databases:</h5>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">PostgreSQL</span>
+                                    <span class="skill-tag">MSSQL</span>
+                                    <span class="skill-tag">MySQL</span>
+                                    <span class="skill-tag">SQLite</span>
+                                    <span class="skill-tag">Redis</span>
+                                </div>
+                            </div>
+                            <div class="skill-subcategory">
+                                <h5>API and Protocols:</h5>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">RESTful</span>
+                                    <span class="skill-tag">WebSocket</span>
+                                    <span class="skill-tag">Swagger</span>
+                                    <span class="skill-tag">MQTT</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="skill-category">
+                            <h4>Frontend & Mobile Development</h4>
+                            <div class="skill-subcategory">
+                                <h5>Frameworks:</h5>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">React.js</span>
+                                    <span class="skill-tag">React Native</span>
+                                    <span class="skill-tag">Redux</span>
+                                    <span class="skill-tag">Next.js</span>
+                                </div>
+                            </div>
+                            <div class="skill-subcategory">
+                                <h5>UI & Styling:</h5>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">Material UI</span>
+                                    <span class="skill-tag">Bootstrap</span>
+                                    <span class="skill-tag">Tailwind CSS</span>
+                                </div>
+                            </div>
+                            <div class="skill-subcategory">
+                                <h5>Testing:</h5>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">Jest</span>
+                                    <span class="skill-tag">React Testing Library</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="skill-category">
+                            <h4>DevOps & System Administration</h4>
+                            <div class="skill-subcategory">
+                                <h5>Operating Systems:</h5>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">Linux</span>
+                                    <span class="skill-tag">Windows</span>
+                                    <span class="skill-tag">MacOS</span>
+                                </div>
+                            </div>
+                            <div class="skill-subcategory">
+                                <h5>Containerization:</h5>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">Docker</span>
+                                    <span class="skill-tag">Kubernetes</span>
+                                </div>
+                            </div>
+                            <div class="skill-subcategory">
+                                <h5>Web Servers:</h5>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">Nginx</span>
+                                    <span class="skill-tag">Apache</span>
+                                </div>
+                            </div>
+                            <div class="skill-subcategory">
+                                <h5>CI/CD:</h5>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">GitHub Actions</span>
+                                    <span class="skill-tag">GitLab CI</span>
+                                </div>
+                            </div>
+                            <div class="skill-subcategory">
+                                <h5>Cloud Platforms:</h5>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">AWS</span>
+                                    <span class="skill-tag">Azure</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="skill-category">
+                            <h4>Teamwork & Collaboration</h4>
+                            <div class="skill-subcategory">
+                                <h5>Tools:</h5>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">Git</span>
+                                    <span class="skill-tag">Jira</span>
+                                    <span class="skill-tag">Trello</span>
+                                    <span class="skill-tag">ClickUp</span>
+                                </div>
+                            </div>
+                            <div class="skill-subcategory">
+                                <h5>Practices:</h5>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">Agile</span>
+                                    <span class="skill-tag">Scrum</span>
+                                    <span class="skill-tag">Kanban</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Projects Tab -->
+            <div id="projects" class="tab-content">
+                <section class="projects">
+                    
+                    <div class="project">
+                        <div class="project-header">
+                            <h4>Reconstructing Human Gaze Behavior in Stroop Test Using IRL and EEG Data</h4>
+                            <div class="project-links">
+                                <a href="https://www.sciencedirect.com/science/article/pii/S2352648325000285" target="_blank" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i> Publication
+                                </a>
+                                <a href="https://github.com/aliarabbasi5155/scanpath" target="_blank" class="project-link">
+                                    <i class="fab fa-github"></i> GitHub
+                                </a>
+                            </div>
+                            <div class="project-org">Alabama University & Mississippi State University & Polytechnic University of Turin</div>
+                            <span class="duration">Jul 2024 - Dec 2024</span>
+                        </div>
+                        <ul class="project-description">
+                            <li>Developed an Inverse Reinforcement Learning (IRL) model to reconstruct human gaze behavior in a Stroop test.</li>
+                            <li>Fine-tuned Detectron2 FPN model for feature extraction of low res and high res Stroop tasks.</li>
+                            <li>Used PPO and GAE inside GAIL algorithm.</li>
+                            <li>Analyzed the impact of cognitive load on gaze patterns and decision-making processes.</li>
+                        </ul>
+                        <div class="project-tech">
+                            <span class="tech-tag">PyTorch</span>
+                            <span class="tech-tag">Detectron2</span>
+                            <span class="tech-tag">PPO</span>
+                            <span class="tech-tag">GAIL</span>
+                            <span class="tech-tag">WandB</span>
+                        </div>
+                    </div>
+
+                    <div class="project">
+                        <div class="project-header">
+                            <h4>COVID-19 Pandemic Network Modelling Using GSM Mobility Data and SIR Model</h4>
+                            <div class="project-links">
+                                <a href="https://github.com/aliarabbasi5155/Pandemic-Network-Simulation" target="_blank" class="project-link">
+                                    <i class="fab fa-github"></i> GitHub
+                                </a>
+                            </div>
+                            <div class="project-org">Polytechnic University of Turin</div>
+                            <span class="duration">Jan 2024 - Mar 2024</span>
+                        </div>
+                        <ul class="project-description">
+                            <li>Developed a network model to simulate the spread of COVID-19 using GSM mobility data and the SIR model on weekly basis.</li>
+                            <li>Used library such as NetworkX, Pandas, and NumPy for data manipulation and analysis.</li>
+                            <li>Used CUDA for efficient HPC of the SIR model on large-scale networks.</li>
+                            <li>Analyzed the impact of mobility patterns on the transmission dynamics of the virus.</li>
+                            <li>Implemented various scenarios to assess the effectiveness of different intervention strategies.</li>
+                        </ul>
+                        <div class="project-tech">
+                            <span class="tech-tag">NetworkX</span>
+                            <span class="tech-tag">Pandas</span>
+                            <span class="tech-tag">NumPy</span>
+                            <span class="tech-tag">CUDA</span>
+                            <span class="tech-tag">SIR Model</span>
+                        </div>
+                    </div>
+
+                    <div class="project">
+                        <div class="project-header">
+                            <h4>Distributed Learning on CIFAR-100 dataset: Data-Parallelism Study</h4>
+                            <div class="project-links">
+                                <a href="https://github.com/aliarabbasi5155/Distributed-Machine-Learning-Algorithms" target="_blank" class="project-link">
+                                    <i class="fab fa-github"></i> GitHub
+                                </a>
+                            </div>
+                            <div class="project-org">Polytechnic University of Turin</div>
+                            <span class="duration">Nov 2023 - Dec 2023</span>
+                        </div>
+                        <ul class="project-description">
+                            <li>Implemented distributed machine learning algorithms, LocalSGD, Distributed SGD, SlowMo, and LocalAdaScale over multiple GPU nodes.</li>
+                            <li>Compared the performance of algorithms on CIFAR-100 dataset in terms of convergence speed, accuracy, and communication overhead.</li>
+                        </ul>
+                        <div class="project-tech">
+                            <span class="tech-tag">PyTorch</span>
+                            <span class="tech-tag">Distributed Learning</span>
+                                                        <span class="tech-tag">CIFAR-100</span>
+                            <span class="tech-tag">GPU Computing</span>
+                        </div>
+                    </div>
+
+                    <div class="project">
+                        <div class="project-header">
+                            <h4>TFLite Triggerer Words Recognition Model</h4>
+                            <div class="project-links">
+                                <a href="https://github.com/aliarabbasi5155/voice-intent-detection" target="_blank" class="project-link">
+                                    <i class="fab fa-github"></i> GitHub
+                                </a>
+                            </div>
+                            <div class="project-org">Polytechnic University of Turin</div>
+                            <span class="duration">Oct 2023</span>
+                        </div>
+                        <ul class="project-description">
+                            <li>Developed a model using TFLite and LSTM architecture on Arduino to detect the triggerer word under low voltage and low memory constraints.</li>
+                        </ul>
+                        <div class="project-tech">
+                            <span class="tech-tag">TensorFlow Lite</span>
+                            <span class="tech-tag">LSTM</span>
+                            <span class="tech-tag">Arduino</span>
+                            <span class="tech-tag">Edge Computing</span>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Publications Tab -->
+            <div id="publications" class="tab-content">
+                <section class="publications">
+                    <div class="publication">
+                        <div class="publication-header">
+                            <h4>Transforming Stroop task cognitive assessments with multimodal Inverse Reinforcement Learning</h4>
+                            <div class="publication-authors">
+                                <strong>Ali Abbasi</strong>, Jiaqi Gong, Soroush Korivand
+                            </div>
+                            <div class="publication-venue">
+                                <span class="journal">Smart Health</span>
+                                <span class="details">36, p. 100567, 2025. Elsevier</span>
+                            </div>
+                            <div class="publication-links">
+                                <a href="https://www.sciencedirect.com/science/article/pii/S2352648325000285" target="_blank" class="publication-link">
+                                    <i class="fas fa-external-link-alt"></i> View Publication
+                                </a>
+                            </div>
+                        </div>
+                        <div class="publication-abstract">
+                            <p>This research presents a novel approach to cognitive assessment using multimodal Inverse Reinforcement Learning to reconstruct human gaze behavior during Stroop tasks. The study combines EEG data with eye-tracking information to better understand cognitive processes and decision-making patterns under different cognitive load conditions.</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Blog Tab -->
+            <div id="blog" class="tab-content active">
+                <section class="blog">
+                    <div class="blog-post">
+                        <div class="blog-header">
+                            <h4>Book Review: "Mindset" by Carol Dweck - A Game-Changer for Personal Growth</h4>
+                            <div class="blog-meta">
+                                <span class="blog-date">October 12, 2025</span>
+                                <span class="blog-category">Book Review</span>
+                            </div>
+                        </div>
+                        <div class="blog-content">
+                            <p class="blog-excerpt">"The view you adopt for yourself profoundly affects the way you lead your life." This powerful opening from Carol Dweck's "Mindset" perfectly captures why this book was such a fantastic read...</p>
+                            <div class="blog-full-content" style="display: none;">
+                                <p><em>"The view you adopt for yourself profoundly affects the way you lead your life."</em> This powerful statement from Carol Dweck's "Mindset" immediately grabbed my attention and set the tone for what would become a truly transformative reading experience.</p>
+                                <p>I recently finished this book, and I can honestly say it was fantastic. Dweck's work encourages everybody to think in a realistic way while pushing us to be active instead of settling down into comfortable but limiting patterns. This resonated deeply with me as someone constantly navigating the challenges of machine learning research and engineering.</p>
+                                <p>What I found most valuable was how the book helped me see barriers as challenges rather than unsolvable problems. In my work with reinforcement learning and autonomous systems, I often encounter complex technical obstacles that can feel overwhelming. Dweck's framework has shifted my perspective from "This is impossible" to "This is an opportunity to grow and learn."</p>
+                                <p>The book's emphasis on embracing challenges rather than avoiding them has been particularly relevant in my research. When working on inverse reinforcement learning models or debugging complex algorithms, I now approach setbacks with curiosity rather than frustration. Instead of seeing failed experiments as roadblocks, I view them as valuable data points that guide me toward better solutions.</p>
+                                <p>Dweck's distinction between fixed and growth mindsets has practical applications beyond personal development. In machine learning, we literally train models to improve through iterative learning and adaptation. The parallel between algorithmic learning and human growth is striking - both require embracing challenges, learning from failures, and continuously evolving.</p>
+                                <p>The realistic thinking aspect that Dweck promotes doesn't mean lowering expectations or accepting limitations. Instead, it means honestly assessing where you are while maintaining an active commitment to growth and improvement. This balance has been crucial in my career transition from fullstack development to specialized ML engineering.</p>
+                                <p>I recommend this book to everybody, especially those in technical fields where continuous learning and problem-solving are essential. Whether you're debugging code, designing new systems, or simply trying to grow personally and professionally, the principles in "Mindset" provide a solid foundation for approaching challenges with confidence and resilience.</p>
+                                <p>This book reminded me that our approach to obstacles often matters more than the obstacles themselves, and that maintaining an active, growth-oriented perspective can transform any barrier into a stepping stone for achievement.</p>
+                            </div>
+                            <button class="blog-toggle-btn" onclick="toggleBlogPost(this)">Show More</button>
+                        </div>
+                    </div>
+
+                    <div class="blog-post">
+                        <div class="blog-header">
+                            <h4>The Future of Machine Learning in Autonomous Systems</h4>
+                            <div class="blog-meta">
+                                <span class="blog-date">January 15, 2025</span>
+                                <span class="blog-category">Machine Learning</span>
+                            </div>
+                        </div>
+                        <div class="blog-content">
+                            <p class="blog-excerpt">Exploring how advanced ML algorithms are revolutionizing autonomous drone systems and their real-world applications in various industries...</p>
+                            <div class="blog-full-content" style="display: none;">
+                                <p>Machine learning has become the cornerstone of modern autonomous systems, particularly in the realm of unmanned aerial vehicles (UAVs). As we advance into 2025, the integration of sophisticated algorithms like Proximal Policy Optimization (PPO) and deep reinforcement learning is transforming how drones operate in complex environments.</p>
+                                <p>In my recent work at Nimbus SRL, we've successfully implemented RL models that have reduced crash rates by 5% under adverse weather conditions. This improvement might seem modest, but in the context of autonomous flight systems, it represents a significant leap in reliability and safety.</p>
+                                <p>The key challenges we face include real-time decision making, environmental adaptation, and energy optimization. Our approach combines computer vision with predictive modeling to create systems that can anticipate and respond to dynamic conditions.</p>
+                                <p>Looking ahead, I believe the next breakthrough will come from multimodal learning systems that can process visual, auditory, and sensor data simultaneously, creating truly intelligent autonomous agents.</p>
+                            </div>
+                            <button class="blog-toggle-btn" onclick="toggleBlogPost(this)">Show More</button>
+                        </div>
+                    </div>
+
+                    <div class="blog-post">
+                        <div class="blog-header">
+                            <h4>Inverse Reinforcement Learning: Understanding Human Behavior</h4>
+                            <div class="blog-meta">
+                                <span class="blog-date">December 28, 2024</span>
+                                <span class="blog-category">Research</span>
+                            </div>
+                        </div>
+                        <div class="blog-content">
+                            <p class="blog-excerpt">My journey through researching human gaze behavior using IRL techniques and what it reveals about cognitive processes...</p>
+                            <div class="blog-full-content" style="display: none;">
+                                <p>Inverse Reinforcement Learning (IRL) offers a fascinating window into understanding human decision-making processes. In my thesis work, I explored how we can reconstruct human gaze behavior during Stroop tasks using EEG data and IRL algorithms.</p>
+                                <p>The Stroop test, a classic cognitive assessment tool, reveals how our brains process conflicting information. By applying IRL techniques, we can reverse-engineer the reward functions that guide human attention and decision-making.</p>
+                                <p>Our research, recently published in Elsevier's Smart Health Journal, demonstrates that multimodal approaches combining EEG signals with eye-tracking data provide unprecedented insights into cognitive load and attention patterns.</p>
+                                <p>This work has implications beyond academic research - it could revolutionize how we design human-computer interfaces, develop assistive technologies, and understand neurological conditions.</p>
+                                <p>The methodology we developed uses GAIL (Generative Adversarial Imitation Learning) with PPO and GAE, creating a robust framework for behavioral reconstruction that could be applied to various cognitive tasks.</p>
+                            </div>
+                            <button class="blog-toggle-btn" onclick="toggleBlogPost(this)">Show More</button>
+                        </div>
+                    </div>
+
+                    <div class="blog-post">
+                        <div class="blog-header">
+                            <h4>Building Scalable ML Systems: Lessons from Production</h4>
+                            <div class="blog-meta">
+                                <span class="blog-date">November 20, 2024</span>
+                                <span class="blog-category">Engineering</span>
+                            </div>
+                        </div>
+                        <div class="blog-content">
+                            <p class="blog-excerpt">Practical insights from deploying machine learning models in production environments and the challenges of scaling AI systems...</p>
+                            <div class="blog-full-content" style="display: none;">
+                                <p>Transitioning from research prototypes to production-ready ML systems presents unique challenges that every ML engineer must navigate. Over the past few years, I've learned valuable lessons about building scalable, reliable AI systems.</p>
+                                <p>One of the biggest challenges is model versioning and deployment. We've implemented CI/CD pipelines using GitHub Actions that automatically test, validate, and deploy model updates. This has reduced our deployment time from hours to minutes while maintaining quality standards.</p>
+                                <p>Data drift is another critical issue. We've developed monitoring systems that track model performance in real-time and alert us when accuracy drops below acceptable thresholds. This proactive approach has prevented several potential system failures.</p>
+                                <p>Infrastructure considerations are equally important. Using containerization with Docker and orchestration with Kubernetes has allowed us to scale our ML services efficiently across multiple environments.</p>
+                                <p>The key takeaway: successful ML systems require as much engineering discipline as they do algorithmic innovation. The most elegant model is useless if it can't be deployed, monitored, and maintained effectively.</p>
+                            </div>
+                            <button class="blog-toggle-btn" onclick="toggleBlogPost(this)">Show More</button>
+                        </div>
+                    </div>
+
+                    <div class="blog-post">
+                        <div class="blog-header">
+                            <h4>The Evolution of LLMs: From GPT to Specialized Models</h4>
+                            <div class="blog-meta">
+                                <span class="blog-date">October 10, 2024</span>
+                                <span class="blog-category">AI Trends</span>
+                            </div>
+                        </div>
+                        <div class="blog-content">
+                            <p class="blog-excerpt">Analyzing the rapid evolution of large language models and their impact on various industries, including our experience with fine-tuning Llama-3...</p>
+                            <div class="blog-full-content" style="display: none;">
+                                <p>The landscape of Large Language Models has evolved dramatically over the past two years. From the initial excitement around GPT models to the current ecosystem of specialized, fine-tuned models, we're witnessing a maturation of the field.</p>
+                                <p>At Nimbus, we recently fine-tuned Llama-3-8b with our company's knowledge base, reducing new employee onboarding time to just 2-3 days. This practical application demonstrates how LLMs can be adapted for specific organizational needs.</p>
+                                <p>The key insight is that generic models, while impressive, often fall short in specialized domains. Fine-tuning allows us to inject domain-specific knowledge while maintaining the model's general capabilities.</p>
+                                <p>We've also implemented RAG (Retrieval-Augmented Generation) systems that serve over 1200 queries weekly for customer support. The combination of retrieval and generation provides more accurate, contextual responses than either approach alone.</p>
+                                <p>Looking forward, I believe we'll see more emphasis on efficient, smaller models that can be easily customized and deployed at the edge, rather than relying solely on massive, centralized models.</p>
+                            </div>
+                            <button class="blog-toggle-btn" onclick="toggleBlogPost(this)">Show More</button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Interests Tab -->
+            <div id="interests" class="tab-content">
+                <section class="interests">
+                    <div class="interests-grid">
+                        <div class="interest-card">
+                            <div class="interest-icon">
+                                <i class="fas fa-book-open"></i>
+                            </div>
+                            <h4>Reading</h4>
+                            <p>Absolutely hooked on business-innovation reads (e.g. Eric Ries) & self-help gems (e.g. Cal Newport).</p>
+                        </div>
+
+                        <div class="interest-card">
+                            <div class="interest-icon">
+                                <i class="fas fa-futbol"></i>
+                            </div>
+                            <h4>Football</h4>
+                            <p>Watch way too much Liverpool matches and play FIFA with friends.</p>
+                        </div>
+
+                        <div class="interest-card">
+                            <div class="interest-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <h4>Learning</h4>
+                            <p>Always reading about new tech trends or taking online courses now focusing on AI trends.</p>
+                        </div>
+
+                        <div class="interest-card">
+                            <div class="interest-icon">
+                                <i class="fas fa-biking"></i>
+                            </div>
+                            <h4>Night Rides</h4>
+                            <p>30-40 min after-dark city spins on my bike—my go-to for a full mind & body recharge.</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Copyright Footer -->
+    <footer class="copyright-footer">
+        <p>&copy; 2025 Ali Abbasi. All rights reserved.</p>
+    </footer>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
